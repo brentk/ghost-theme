@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<link href='http://fonts.googleapis.com/css?family=Roboto:400,900|Roboto+Slab:400,700' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="{{asset "css/screen.css"}}?v=20150507" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!-- favicons: I have no idea what I'm doing -->
+		<link rel='shortcut icon' type='image/vnd.microsoft.icon' href='{{asset "images/bk16.ico"}}'>
+		<link rel='apple-touch-icon' type='image/png' href='{{asset "images/bk256.png"}}'>
+		<link rel='icon' type='image/png' sizes='16x16' href='{{asset "images/bk16.png"}}'>
+		<link rel='icon' type='image/png' sizes='32x32' href='{{asset "images/bk32.png"}}'>
+		<link rel='icon' type='image/png' sizes='96x96' href='{{asset "images/bk96.png"}}'>
+		<link rel='icon' type='image/png' sizes='128x128' href='{{asset "images/bk128.png"}}'>
+		<link rel='icon' type='image/png' sizes='256x256' href='{{asset "images/bk256.png"}}'>
+
+		<!-- menu opening on mobile: -->
+		<script type="text/javascript">
+			jQuery(document).ready( function($) {
+				$(".menu-button, .nav-cover, .nav-close").on("click", function(e){
+					e.preventDefault();
+					$("body").toggleClass("nav-opened nav-closed");
+				});
+			});
+		</script>
+
+
+		<title>{{@blog.title}}</title>
+    		{{ghost_head}}
+	</head>
+	<body class="{{body_class}} nav-closed">
+    		{{navigation}}
+		{{{body}}}
+    		{{ghost_foot}}
+	</body>
+</html>
+

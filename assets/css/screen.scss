@@ -1,0 +1,522 @@
+@import 'reset';
+
+$fontSerif: 'Roboto Slab', serif;
+$fontSans: 'Roboto', sans-serif;
+
+$headerColor: white;
+
+$titleColor: #444;
+$bodyColor: #444;
+
+h1 {
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 0px;
+	font-family: $fontSerif;
+	font-size: 2.5em;
+	font-weight: bold;
+}
+h2 {
+	@extend h1;
+	padding-left: 5px;
+	font-size: 2.25em;
+}
+h3 {
+	@extend h1;
+	padding-left: 10px;
+	font-size: 2em;
+}
+h4 {
+	@extend h1;
+	padding-left: 15px;
+	font-size: 1.75em;
+}
+h5 {
+	@extend h1;
+	padding-left: 20px;
+	font-size: 1.5em;
+}
+
+strong {
+	font-weight: bold;
+}
+
+ul {
+	padding-left: 20px;
+	padding-top: 15px;
+	padding-bottom: 25px;
+}
+li {
+	list-style-type: disc;
+}
+
+.brentk-logo {
+	height: 25px;
+	padding-right: 8px;
+}
+
+.nav {
+	position:fixed;
+	float: right;
+	opacity: 0;
+	width: 100%;
+	height: 0%;
+	background-color: black;
+	-webkit-transition: opacity 0.3s ease;
+	        transition: opacity 0.3s ease;
+}
+
+.nav .nav-title {
+	font-family: $fontSans;
+	font-weight: bold;
+	font-size: 1.4em;
+	margin-top: 6px;
+	text-align:center;
+	color: white;
+	border-bottom: 1px solid #444;
+	padding-top: 10px;
+	padding-bottom: 12px;
+}
+
+.nav ul li{
+	padding-top: 10px;
+	padding-bottom: 10px;
+	width: 100%;
+	text-align:right;
+}
+.nav a {
+	font-family: $fontSans;
+	font-size: 3em;
+	font-weight: bold;
+	color: white;
+	width: 100%;
+	text-decoration: none;
+	text-transform: uppercase;
+	padding-right: 25px;
+}
+
+.nav .subscribe-button {
+	display: none;
+}
+
+.nav .nav-close {
+	display: none;
+}
+
+body.nav-opened .nav {
+	z-index: 0;
+	opacity: .98;
+	height: 100%;
+}
+
+body.nav-closed .nav {
+	z-index: -100;
+	opacity: 0;
+	height: 0%;
+}
+
+.menu-button .burger {
+}
+
+.menu-button .word {
+	display: none;
+}
+.menu-button {
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	font-size: 2em;
+	color: #999;
+	text-decoration: none;
+	padding: 4px;
+	padding-left: 6px;
+	padding-right: 6px;
+	border-radius: 6px;
+}
+
+header {
+	color: $headerColor;
+	font-size: 1em;
+	width: 100%;
+	height: 200px;
+}
+
+header.author-head {
+	background: no-repeat center;
+	background-size: cover;
+	width: 100%;
+	height: 200px;
+}
+.author-title {
+	width: 100%;
+	text-align: center;
+}
+.hidden { 
+	display: none;
+}
+
+/* I have no idea why this is rendering over the nav menu... */
+body.nav-opened .author-image {
+	display: none;
+}
+
+.author-image {
+	width: 100%;
+	text-align: center;
+	height: 64px;
+}
+.author-image .img{
+	position: relative;
+	top: -84px;
+	background-color: white;
+	background-size: 128px 128px;
+	border: 10px solid white;
+	border-radius: 50%;
+	margin: auto;
+	height: 128px;
+	width: 128px;
+}
+.author-meta {
+	font-family: $fontSans;
+	width: 100%;
+	text-align: center;
+}
+
+@mixin wiggle-animation($duration) {
+	-webkit-animation-name: title-wiggle;
+	-webkit-animation-duration: $duration;
+	   -moz-animation-name: title-wiggle;
+	   -moz-animation-duration: $duration;
+	        animation-name: title-wiggle;
+	        animation-duration: $duration;
+}
+	
+header h1 {
+	font-size: 1.8em;
+	font-weight: bold;
+	font-family: $fontSans;
+	padding-top: 60px;
+	padding-bottom: 25px;
+	margin: auto;
+	text-align: center;
+	text-shadow: 0px 0px 10px black;
+	color: #fff;
+
+	@include wiggle-animation(1s);
+}
+
+@keyframes title-wiggle {
+    25%   {transform: rotate(1.5deg);}
+    50%   {transform: rotate(-1deg);}
+    75%   {transform: rotate(.5deg);}
+    100%  {transform: rotate(0deg);}
+}
+
+@-webkit-keyframes title-wiggle {
+    25%   {-webkit-transform: rotate(1.5deg);}
+    50%   {-webkit-transform: rotate(-1deg);}
+    75%   {-webkit-transform: rotate(.5deg);}
+    100%  {-webkit-transform: rotate(0deg);}
+}
+
+@-moz-keyframes title-wiggle {
+    25%   {-moz-transform: rotate(1.5deg);}
+    50%   {-moz-transform: rotate(-1deg);}
+    75%   {-moz-transform: rotate(.5deg);}
+    100%  {-moz-transform: rotate(0deg);}
+}
+
+header p {
+	font-family: $fontSerif;
+	margin: 0px;
+	padding-top: 0px;
+	font-size: 1em;
+	width: 100%;
+	text-align: center;
+	color: #fff;
+}
+
+#brentk-social-buttons{
+	padding: 0px;
+	margin-top: 16px;
+	width: 99%;
+	text-align: center;
+}
+
+#brentk-social-buttons a{
+	border: 0px;
+}
+
+.brentk-social-icon {
+	width: 32px;
+	margin-left: 8px;
+	margin-right: 8px;
+}
+
+.clearfix {
+	clear: both;
+}
+#section-1 {
+	float: none;
+}
+.brentk-post-title{
+	margin-left: 12px;
+	margin-right: 12px;
+	padding-top: 30px;
+	padding-bottom: 10px;
+}
+.brentk-post-title a:link{
+	text-decoration: none;
+}
+.brentk-post-title a {
+	color: $titleColor;
+	font-family: $fontSerif;
+	font-size: 1.2em;
+	font-weight: bold;
+}
+
+.brentk-post-body {
+	font-family: $fontSans;
+	font-size: .8em;
+	padding: 0px;
+	margin-left: 24px;
+	margin-right: 24px;
+	color: $bodyColor;
+	padding-bottom: 10px;
+	line-height: 190%;
+}
+
+.brentk-post-body p{
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
+.brentk-post-body a{
+	color: $bodyColor;
+}
+
+#brentk-post-wrapper {
+	width: 90%;
+	margin: auto;
+}
+
+.read-more {
+	text-decoration: none;
+	color: $bodyColor;
+}
+
+.brentk-post-byline-block {
+	height: 42px;
+	width: 90%;
+	margin: auto;
+	border-bottom: 1px solid #AAA;
+}
+
+.brentk-post-byline a {
+	text-decoration: none;
+	color: #444;
+}
+
+.brentk-post-byline {
+	font-family: $fontSerif;
+	font-size: .8em;
+	padding: 0px;
+	margin: 0px;
+	margin-left: 12px;
+	margin-right: 18px;
+	padding-top: 10px;
+}
+
+.brentk-author-thumb {
+	width: 32px;
+	float: left;
+	margin-left: 0px;
+	margin-right: 8px;
+	border-radius: 50%;
+}
+
+.brentk-social-media {
+	width: 100%;
+	text-align: center;
+}
+
+.page-number {
+	padding-top:50px;
+	font-family: $fontSans;
+	font-size: .8em;
+}
+footer {
+	font-family: $fontSans;
+	color: #999;
+}
+
+footer a{
+	color: #666;
+}
+
+footer .copyright {
+	font-size: .8em;
+	padding: 0px;
+	padding-left: 8px;
+	float: left;
+	width: 47%;
+}
+footer .poweredby {
+	font-size: .8em;
+	padding: 0px;
+	padding-right: 8px;
+	float: right;
+	width: 47%;
+	float: right;
+	text-align: right;
+}
+
+#twitter-widget-0 {
+	width: 100% !important;
+}
+
+/* over 600px wide */
+@media (min-width: 600px) {
+	header {
+		color: $headerColor;
+		font-size: 2.4em;
+		background-size: cover;
+		width: 100%;
+		height: 100vh;
+	}
+
+	header h1 {
+		padding-top: 120px;
+	}
+
+	.brentk-logo {
+		height: 53px;
+		padding-right: 18px;
+	}
+
+	.menu-button {
+		display: none;
+	}
+
+	body.nav-closed .nav {
+		z-index: 0;
+		display: block;
+		opacity: 1;
+		height: 30px;
+	}
+
+	body.nav-opened .nav {
+		z-index: 0;
+		display: block;
+		opacity: 1;
+		height: 30px;
+	}
+
+	.nav {
+		background-color: rgba(0, 0, 0, .45);
+		border-bottom: 1px solid white;
+	}
+
+	.nav .nav-title {
+		display: none;
+	}
+
+	.nav li:after{
+		content: '|';
+		font-family: $fontSerif;
+		text-transform: lowercase;
+		font-size: 1.5rem;
+		color: white;
+	}
+
+	.nav li {
+		display: inline;
+	}
+
+	.nav ul {
+		padding: 0px;
+		display: block;
+		text-align: left;
+	}
+
+	.nav a {
+		font-family: $fontSerif;
+		text-transform: lowercase;
+		font-size: 1.5rem;
+		margin-top: 15px;
+		padding-left: 15px;
+		padding-right: 15px;
+		
+	}
+
+	#brentk-social-buttons{
+		margin-top: 64px;
+	}
+	.brentk-social-icon {
+		width: 64px;
+		margin-left: 32px;
+		margin-right: 32px;
+	}
+
+	#brentk-container {
+		margin: auto;
+		padding-left: 40px;
+		padding-right: 40px;
+		max-width: 900px;
+	}
+	#section1 {
+		margin: 0px;
+		padding-right: 20px;
+		float: left;
+		width: 65%;
+		border: 0px;
+	}
+	.brentk-social-media {
+		padding: 0px;
+		margin: 0px;
+		margin-top: 50px;
+		margin-bottom: 50px;
+		float: right;
+		width: 30%;
+		border: 0px;
+	}
+	.brentk-social-media iframe{
+		width: 100%;
+	}
+
+	#brentk-post-wrapper {
+		width: 65%;
+		max-width: 900px;
+		margin: auto;
+	}
+
+	.brentk-post-title {
+		padding-top: 60px;
+	}
+
+	.brentk-post-title a{
+		font-size: 1.5em;
+		margin-right: 12px;
+		margin-left: 12px;
+		padding-bottom: 0px;
+	}
+
+	.brentk-post-body {
+		font-size: 1.2em;
+		margin-left: 24px;
+		margin-right: 24px;
+	}
+
+	.brentk-post-byline {
+		font-size: .8em;
+		margin-right: 18px;
+		margin-left: 12px;
+	}
+}
+
+@media print {
+	.nav {
+		display: none;
+	}
+
+}
