@@ -1,0 +1,75 @@
+
+.hidden {
+  display: none;
+}
+
+#twitter-container {
+  position: relative;
+  display: inline-block;
+  border-radius: 66px;
+  width: 66px;
+  height: 66px;
+  background-color: white;
+}
+
+#twitter-container:hover #twitter-icon {
+  animation: rock 1s infinite alternate ease-in-out;
+}
+
+#twitter-container:hover #color-animation {
+  display: block;
+}
+
+#twitter-icon {
+  font-size: 1.1em;
+  position: absolute;
+  top: 18%;
+  left: 22%;
+  color: black;
+}
+
+.rock {
+  animation: rock 1s infinite alternate ease-in-out;
+}
+
+@keyframes rock {
+  to { transform: rotate(10deg); }
+}
+
+#color-animation {
+  animation: color-animate 2s infinite linear;
+}
+
+@keyframes color-animate {
+  0% { color: black; }
+  100% { color: white; }
+}
+
+#side-animation {
+  position: absolute;
+  top: 26%;
+  left: 75%;
+  animation: side-animate 2s infinite linear;
+}
+
+@keyframes side-animate {
+  to { transform: translatex(500%); }
+}
+
+#vertical-animation {
+  position: relative;
+  animation: vertical-animate 2s infinite linear;  
+}
+
+@keyframes vertical-animate {
+  to { transform: translatey(-250%); }
+}
+
+.music-note {
+  font-size: 1.6em;
+  animation: wave .5s alternate infinite ease-in-out;
+}
+
+@keyframes wave {
+  to { transform: translatey(-30px); }
+}
