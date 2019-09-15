@@ -1,4 +1,9 @@
 {
-  "name": "brentk",
-  "version": "0.0.1"
+    "name": "brentk",
+    "version": "0.0.2",
+    "author": {
+        "name": "brentk",
+        "email": "brenttkelly@gmail.com",
+        "url": "https://brentkelly.com"
+    }
 }
