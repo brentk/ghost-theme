@@ -1,12 +1,12 @@
 {{!< default}}
 
-{{#if @blog.navigation}}
+{{#if @site.navigation}}
 	<a class="menu-button" href="#"><span class="burger">&#9776;</span><span class="word">Menu</span></a>
 {{/if}}
-<header id="headline" style="background-image: url({{#if @blog.cover_image}}{{@blog.cover_image}}{{else}}{{asset "images/code_monaco-6.png"}}{{/if}});">
+<header id="headline" style="background-image: url({{#if @site.cover_image}}{{@site.cover_image}}{{else}}{{asset "images/code_monaco-6.png"}}{{/if}});">
         
-	<h1>{{#if @blog.logo}}<img src="{{@blog.logo}}" alt="Blog Logo" class="brentk-logo" />{{/if}}{{@blog.title}}</h1>
-	<p>{{@blog.description}}</p>
+	<h1>{{#if @site.logo}}<img src="{{@site.logo}}" alt="Blog Logo" class="brentk-logo" />{{/if}}{{@site.title}}</h1>
+	<p>{{@site.description}}</p>
 	<div id="brentk-social-buttons">
 	<a href="https://github.com/brentk" class="brentk-social-link"><img id="brentk-github-icon" class="brentk-social-icon" src="{{asset "images/github.png"}}" alt="github"/></a>
 	<a href="https://www.facebook.com/brent.kelly.79" class="brentk-social-link"><img id="brentk-facebook-icon" class="brentk-social-icon" src="{{asset "images/facebook.png"}}" alt="facebook"/></a>
@@ -24,7 +24,7 @@
 	<br>
 </div>
 <footer class="site-footer clearfix">
-	<section class="copyright"><a href="{{@blog.url}}">{{@blog.title}}</a> &copy; 2015</section>
+	<section class="copyright"><a href="{{@site.url}}">{{@site.title}}</a> &copy; 2015</section>
 	<section class="poweredby">Proudly published with <a href="https://ghost.org">Ghost</a></section>
 </footer>
 

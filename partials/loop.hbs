@@ -3,8 +3,8 @@
 <div class="brentk-post-body">{{content}}</div>
 <!--<p class="brentk-post-body">{{excerpt words="32"}}<a class="read-more" href="{{url}}">...</a></p>-->
 <div class="brentk-post-byline-block">
-	<img class="brentk-author-thumb" src="{{author.profile_image}}" alt="Author image" nopin="nopin" />
-	<h4 class="brentk-post-byline">{{author}} | <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time></h4>
+	<img class="brentk-author-thumb" src="{{primary_author.profile_image}}" alt="Author image" nopin="nopin" />
+	<h4 class="brentk-post-byline">{{authors}} | <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time></h4>
 </div>
 <br class="clearfix">
 {{/foreach}}
